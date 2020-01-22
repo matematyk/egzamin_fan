@@ -1,0 +1,398 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath} % załatwiło problem
+\title{egzamin rp}
+\author{supp.crossbooking }
+\date{June 2019}
+\usepackage{polski}
+\usepackage[a4paper,margin=1.75cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+\usepackage{todonotes}
+\usepackage{thmtools}
+% Symbol normy
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+ 
+% Paragrafy bez wcięć
+\setlength\parindent{0pt}
+
+\setlength{\parskip}{6pt}
+
+% Style dla twierdzeń itd.
+\theoremstyle{plain}
+\newtheorem*{theorem}{Twierdzenie}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definicja}
+\newtheorem*{corollary}{Wniosek}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Uwaga}
+
+\newcommand{\abs}[1]{\left|#1\right|} % Absolute value
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert} % Norm
+\newcommand{\closure}[1]{\overline{#1}} % Set closure
+\newcommand{\extcomplex}{\overline{\mathbb{C}}} % Extended complex plane
+\newcommand{\eqtext}[1]{\overset{\text{\tiny\sffamily #1}}{=}} % Text over equality sign
+\newcommand{\Forall}[1]{\mathop{\vcenter{\hbox{\LARGE$\forall$}}}\limits_{#1}} % Huge \forall for full-line rendering
+\newcommand{\res}{\mathop{\text{Res}}\limits} % Residuum
+%\setlist[enumerate]{label=(\alph*),ref=(\alph*),leftmargin=*,topsep=0.4ex,itemsep=-0.6ex,partopsep=1ex,parsep=1ex} % List margins
+%\setlist[itemize]{topsep=0.4ex,itemsep=-0.6ex,partopsep=1ex,parsep=1ex} % List margins
+
+\begin{document}
+
+\maketitle
+{\small\listoftheorems[ignoreall,onlynamed={theorem,definition,remark,corollary}]}
+
+\section{Introduction}
+Co było na wykładzie?
+\subsection{1 wykład}
+\begin{theorem}{Zasadniczne twierdzenie algebry FAN}
+Każdy wieloman zespolony ma pierwiastek zespolony 
+\end{theorem}
+
+\subsection{2 wykład}
+\begin{definition}[Obszar]
+Niepusty i spójny podzbiór płaszczyzny zespolonej
+\end{definition}
+
+\begin{definition}{Obszar jednospójny FAN2012, FAN2009}
+Obszar $U \subset \mathbb{C}$ jest obszarem jednospójnym, jeśli każdą zawartą w nim pętlę można w sposób ciągły zdeformować do punktu
+\end{definition}
+
+\begin{remark}
+Brzeg takiego obszaru ma wtedy jedną składową spójności.
+\end{remark}
+
+\begin{itemize}
+    \item Droga
+    \item Spójna topologiczne
+    \item klasa abstrakcji, łukowo spójność
+\end{itemize}{}
+
+\begin{definition}[różniczkowalność w sensie zespolonym]
+
+\end{definition}{}
+
+\begin{definition}[Holomorficzność]
+
+\end{definition}{}
+
+\begin{definition}[Rówanie Cauchego Riemana]
+
+\end{definition}
+
+\begin{definition}[Koforemntość]
+
+\end{definition}{}
+
+\begin{theorem}[Twierdzenie Riemanna o przekształceniach konforemnych]
+
+\end{theorem}
+
+\begin{definition}[Całka krzywoliniowa Riemana po drodze FAN2019-2]
+
+\end{definition}
+
+\todo{Czy zachodzi wzór?}
+
+\subsection{3 wykład 28-30}
+
+\begin{theorem}[Gauss-Lucas str14]
+
+
+\end{theorem}
+
+\begin{definition}{Całkowanie po krzywych]
+
+\end{definition}
+
+
+
+\begin{theorem}{Tw Laurenta}
+
+\end{theorem}
+
+
+
+\subsection{Wykład 5}
+
+\begin{itemize}
+    \item Fakt 1
+    \item Fakt 2
+    
+\end{itemize}
+
+\begin{theorem}{Lemat Całkowy Goursata FAN2012}
+
+\end{theorem}{}
+
+\begin{theorem}{Tw. Cauchego o krzywych homotopijnych FAN2012}
+
+\end{theorem}
+
+\subsection{Wykład 25.11.2019{24}}
+
+
+\begin{theorem}[Wzór Całkowy Cauchego 101]
+Niech $ \closure{D} \subset U \subset \mathbb{C} $, gdzie $ D $, $ U $ dowolne obszary.
+  Niech $ f $ holomorficzna na $ U $.
+  Wtedy
+  \[
+  f(z) = \frac{1}{2 \pi i} \int_{\partial D} \frac{f(\zeta)}{(\zeta - z)} d\zeta 
+  \]
+\end{theorem}
+
+\begin{theorem}[Rozwijanie funkcji holomorficznej w szereg Taylora 104]
+  Niech $ f $ będzie holomorficzna w obszarze $ U $ oraz $ K(a, R) \subset D $. Wówczas istnieje szereg postaci $ \sum_{n = 0}^{\infty} c_{n}(z-a)^{n} $, zbieżny do f(z) wewnątrz koła $ K(a, R) $. Ten szereg nazywamy szeregiem Taylora.
+\end{theorem}
+
+\begin{proof}
+  Całkujemy po koncentrycznych okręgach wewnątrz koła $ K(a, R) $.
+  \begin{align*}
+    f(z) &
+    = \frac{1}{2 \pi i} \int_{C(a, r)} \frac{f(\zeta)}{\zeta-z} d\zeta
+    = \frac{1}{2 \pi i} \int_{C(a, r)} \frac{f(\zeta)}{\zeta-a-(z-a)} d\zeta \\ &
+    = \frac{1}{2 \pi i} \int_{C(a, r)} \frac{f(\zeta)}{\zeta-a} \cdot \frac{1}{1 - \frac{z-a}{\zeta-a}} d\zeta
+    = \frac{1}{2 \pi i} \int_{C(a, r)} \frac{f(\zeta)}{\zeta-a} \cdot \sum_{n=0}^{\infty} \frac{(z-a)^{n}}{(\zeta-a)^{n}} d\zeta = (*)
+  \end{align*}
+  Korzystamy z kryterium Weierstrassa. Zauważmy, że
+  $
+    \abs{\frac{f(\zeta)}{\zeta-a} \cdot \frac{(z-a)^{n}}{(\zeta-a)^{n}}}
+    < \frac{M}{r} \cdot \abs{\frac{z-a}{r}}^n
+    < \frac{M}{r} \cdot 1
+  $
+  . Możemy więc całkować wyraz po wyrazie.
+  \begin{align*}
+    (*) &
+    \eqtext{W} \sum_{n=0}^{\infty} \left( \frac{1}{2 \pi i} \int_{C(a, r)} \frac{f(\zeta)}{(\zeta-a)^{n+1}} d\zeta \right)(z-a)^{n}
+    = \sum_{n = 0}^{\infty} c_{n}(z-a)^{n}
+  \end{align*}
+  Współczynniki $ c_{n} $ są następującej postaci:
+  $$
+    c_{n} = \frac{1}{2 \pi i} \int_{C(a, r)} \frac{f(\zeta)}{(\zeta-a)^{n+1}} d\zeta
+  $$
+\end{proof}
+
+\begin{corollary}[Nierówność Cauchy'ego FAN2019-2]
+  Niech $ M(r) = \max_{\abs{z-a} = r < R} \abs{f(z)} $. Wówczas zachodzi nierówność
+  $$ \abs{c_{n}} = \abs{ \frac{1}{2 \pi i} \int_{C(a, r)} \frac{f(\zeta)}{(\zeta-a)^{n+1}} d\zeta } \leq \frac{1}{2 \pi} \cdot \frac{M(r)}{r^{n+1}} \cdot 2 \pi r = \frac{M(r)}{r^n} $$
+\end{corollary}
+
+
+\begin{theorem}{Transformata całkowa Cauchego}
+
+\end{theorem}
+
+\begin{theorem}{Lemat Schwarza}
+Niech $ f $ funkcja holomorficzna w kole $ K(0, R) $.
+  Jeśli $ f(0) = 0 $ oraz $ \forall z \in D\enskip\abs{f(z)} \leq M $, to
+  $$
+    \abs{f'(0)} \leq \frac{M}{R}
+    \qquad \textnormal{oraz} \qquad
+    \abs{f(z)} \leq \frac{M}{R}\abs{z}
+  $$
+  Ponadto, równość zachodzi wtedy i tylko wtedy, gdy $ f $ jest postaci
+  $$
+    f(z) = \frac{M}{R}e^{it}z
+  $$
+\end{theorem}
+
+
+\begin{proof}
+  Bez utraty ogólności możemy dowodzić dla $ M = 1 $, $ R = 1 $.
+
+  Z $ f(0) = 0 \Rightarrow f(z) = z \cdot g(z) $, gdzie $g$ jest holomorficzna w kole $ K(0,1) $.
+  Stosujemy zasadę maksimum dla $ g(z) $, $ r < R = 1 $.
+  $$
+    \max_{z \in \closure{K(0, r)}} \abs{g(z)} =
+    \max_{z \in C(0, r)} \abs{g(z)}
+    \leq \max_{z \in C(0, r)} \frac{\abs{f(z)}}{\abs{z}}
+    \leq \frac{1}{r}
+  $$
+  Przy $ r \to 1 $ dostajemy $ max_{z \in \closure{K(0, r)}} \abs{g(z)} \leq 1 $.
+  Stąd
+  $$
+    \Forall{z \in K(0, r)} 1 \geq \abs{g(z)}
+    = \frac{\abs{f(z)}}{\abs{z}}
+    \qquad \implies \qquad
+    \abs{f(z)} \leq \abs{z}
+  $$
+  co dowodzi jednej nierówności z twierdzenia.
+  Dla pochodnej mamy
+  $$
+    f(z) = zg(z)
+    \quad\Rightarrow\quad
+    f'(z) = g(z) + zg'(z)
+    \quad\Rightarrow\quad
+    f'(0) = g(0)
+    \quad\Rightarrow\quad
+    \abs{f'(0)} = \abs{g(0)}
+    \leq 1
+  $$
+
+  Jeśli $ \abs{f(z_0)} = \abs{z_0} $ dla pewnego $ z_0 \neq 0 $, to $ \abs{g(z_0)} = 1 $.
+  Czyli $ g $ osiąga maksimum wewnątrz $ K(0, 1) $, więc z zasady maksimum jest stała.
+  Skoro $ \abs{g(z)} = 1 $, to $ g(z) = e^{it} $.
+\end{proof}
+
+\begin{theorem}[Wzór całkowy Cauchy'ego dla pochodnych FAN2019-2]
+  Niech $ \closure{D} \subset G \subset \mathbb{C} $, gdzie $ D $, $ G $ dowolne obszary.
+  Niech $ f $ holomorficzna na $ G $.
+  Wtedy
+  $$ \forall{n \in \mathbb{N}_0} \forall{a \in D} \quad f^{(n)}(a) = \frac{n!}{2 \pi i} \int_{\partial D} \frac{f(\zeta)}{(\zeta - a)^{n+1}} d\zeta $$
+\end{theorem}
+
+\begin{theorem}{Własności wartości Średniej}
+\end{theorem}
+
+\begin{theorem}[Zasada maksimum 26]
+Niech $ f $ funkcja holomorficzna w obszarze $ D $.
+  Jeśli $ \max_D \abs{f(z)} $ jest osiągane wewnątrz $ D $, to $ f $ jest stała.
+\end{theorem}
+
+\begin{theorem}{tw Louviella FAN2019-2}
+ Każda funkcja całkowita i ograniczona jest stała.
+\end{theorem}
+
+
+\begin{proof}
+ \begin{align*}
+ f^{(n)}(0) = \frac{n!}{2 \pi i} \int_{\partial D} \frac{f(w)}{(w)^{n+1}} dw
+ \end{align*}
+ \[
+   |f^{(n)}(0)| \leq \frac{n!}{2 \pi i} L(\partialD(0,R) \frac{\supp|f(w))}{R^n+1} dw \mapsto 0
+ \]
+\end{proof}
+
+\begin{theorem}{zasada maksimum 2}
+
+\end{theorem}
+
+\subsection{Wykład}
+
+\begin{theorem}{Zasada izolowanych zer 33}
+Zero skończonej krotności $f$ holomorficznej jest izolowane, tzn nie jest punktem skupienia zbioru pozostałych zer.
+\end{theorem}
+
+\begin{theorem}{Zasada identyczności 34}
+$U $ obszar $f, g \in H(U)$. Jeżeli $\{z \in \mathbb{C} f(z) = g(z) \}$ ma punkt skupienia należący do U to 
+\[
+\forall{z\in U} f(z) = g(z)
+\]
+\end{theorem}
+
+\begin{theorem}{Tw Morery FAN2009}
+Niech $f:U \mapsto \mathbb{C}$ jest ciągła. Wówczas następujące warunki są równoważne:
+\end{theorem}
+\begin{enumerate}
+    \item $f$ jest holomorficzna na $U$
+    \item $\int_{\partial \bigtriangleup} f(z)dz = 0 \quad \forall{\bigtriangleup} \subset U$
+\end{enumerate}{}
+
+\begin{proof}
+ \begin{enumerate}
+     \item $f$ jest holomorficzna na $U \implies$ f ma funkcje pierwotną $\implies \Forall{\bigtriangleup \subset U} \int_{\partial \bigtriangleup} f(z)dz = 0$
+     \item \todo{na karce w drugą strone}
+ \end{enumerate}
+\end{proof}
+
+\subsection{Wykład 9.12.2019- 38}
+
+\begin{itemize}
+    \item Fakt 1
+    \item Fakt 2
+\end{itemize}
+
+\begin{theorem}{Zasada symetrii Riemanna Scharza}
+Jeżeli $f^{+}$ i $f^{-}$ są holomoriczne w $\quad \Omega^{+}$ and $\Omega^{-}$ respectively, that extend continuously to I and
+\[
+f^{+}(x)=f^{-}(x) \quad \text { for all } x \in I
+\]
+then the function $f$ defined on $\Omega$ by
+\[
+f(z)=\left\{\begin{array}{ll}
+{f^{+}(z)} & {\text { if } z \in \Omega^{+}} \\
+{f^{+}(z)=f^{-}(z)} & {\text { if } z \in I} \\
+{f^{-}(z)} & {\text { if } z \in \Omega^{-}}
+\end{array}\right.
+\]
+is holomorphic on all of \Omega.
+\end{theorem}
+
+\begin{theorem}{Ciągła gałąź logarytmu}
+                        
+\end{theorem}
+
+\todo{Zadanie domowe}
+
+\subsection{Wyklad }
+\begin{theorem}{Gałąź logarytmu}
+
+\end{theorem}
+
+\begin{theorem}{FAN2012}
+Udowodnić, że każda funkcja holomorficzna, określona w obszarze jednospójnym i nie przyjmująca wartości 0, ma w nim gałąź argumentu, logarytmu i pierwiastka kwadratowego.
+\end{theorem}
+
+\begin{definition}{indeks Pętla FAN2009}
+
+\end{definition}
+
+\todo{Zadanie domowe}
+
+\subsection{Wykład po 13.01.2020}
+
+\begin{theorem}{Weierstrass FAN2009}
+
+  Niech szereg funkcji holomorficznych (na $U$) $ f_n(z) $ będzie niemal jednostajnie zbieżny na obszarze $U$ do $f$. Wówczas $f$ jest holomorficzna na $U \subset \mathbb{C}$, a także $f_n(z)^{'}$ zbiega niemal jednostajnie do $f'$ na $U$.
+  
+  
+\end{theorem}
+
+\begin{remark}{Przypadek rzeczywisty}
+$f_n(x) = \frac{1}{n}\sin(n^{2}x), f=0$ $f_n$ zbiega jednostajnie do f, jednak pochodne nie zbiegają $f_n^{'} = n \cos(n^2x)$ nie zbiegają jednostajnie do $f'(0)$
+\end{remark}
+
+\url{http://duch.mimuw.edu.pl/~pol/Funkcje%20Analityczne/Wyklady7,8}
+
+\begin{theorem}{Reguła D' Hospitala}
+f, g holomorficzna na otoczeniu otwartym $z_0$ i $f(z_0) = g(z_0) = 0$ i $g'(z_0) != 0$
+\end{theorem}
+
+\begin{theorem}{Carl-Weistrass}
+
+\end{theorem}
+
+\begin{theorem}{Tw. Laurent  o rozwijaniu w szreg}
+
+\end{theorem}
+
+
+\begin{theorem}{Tw o Residuach}
+
+\end{theorem}
+
+\begin{theorem}{DW-TW o Residuach}
+
+\end{theorem}
+
+\begin{theorem}{tw Riemmana}
+
+\end{theorem}
+\todo{Dlaczego nie można tutaj stosować tw. Morery FAN2012, FAN2009}
+
+\begin{definition}{Funkcja meromorficzna FAN}
+
+\end{definition}
+
+\todo{Meromoriczna na C i nie jest stała. Wykaż, że jej obraz jest gęsty w C}
+
+\begin{theorem}{Casoratiego-Sochockiego-Weierstrassa FAN2012}
+
+\end{theorem}
+
+\end{document}
